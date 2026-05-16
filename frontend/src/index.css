@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-surface backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)];
+  }
+  
+  .glass-panel-light {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-400 via-accent-400 to-primary-500;
+  }
+}
+
+/* Beautiful Markdown Styling for the Dark Theme */
+.prose {
+  @apply text-slate-300 leading-relaxed;
+}
+.prose h1, .prose h2, .prose h3, .prose h4 {
+  @apply font-display font-bold text-slate-100 mt-8 mb-4 tracking-tight;
+}
+.prose h1 { @apply text-3xl; }
+.prose h2 { @apply text-2xl border-b border-white/10 pb-2; }
+.prose h3 { @apply text-xl text-primary-400; }
+.prose p { @apply mb-4 text-slate-300; }
+.prose a { @apply text-primary-400 underline decoration-primary-400/30 hover:decoration-primary-400 transition-colors; }
+.prose ul { @apply list-disc list-inside mb-4 space-y-1; }
+.prose ol { @apply list-decimal list-inside mb-4 space-y-1; }
+.prose li::marker { @apply text-slate-500; }
+.prose strong { @apply font-semibold text-slate-200; }
+.prose blockquote { @apply border-l-4 border-primary-500/50 pl-4 italic text-slate-400 bg-white/5 py-2 rounded-r-lg my-4; }
+.prose code { @apply bg-black/50 text-accent-400 px-1.5 py-0.5 rounded text-sm font-mono border border-white/10; }
+.prose pre { @apply bg-black/80 p-4 rounded-lg overflow-x-auto border border-white/10 my-4 shadow-xl; }
+.prose pre code { @apply bg-transparent text-slate-200 p-0 border-0 text-sm; }
